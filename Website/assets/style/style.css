@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("../images/background.svg");
+}
+
+a{
+    padding: 20px;
+}
+
+nav{
+    border-bottom: 5px solid white;
+
+}
+
+.navContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: fit-content;
+    list-style-type: none;
+}
+
+.navItem{
+    flex-grow: 1;
+    flex-basis: auto;
+}
+
+.lastDiv{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.lastItem{
+    border-left: 5px solid white;
+    padding: 20px 35px;
+}
+
