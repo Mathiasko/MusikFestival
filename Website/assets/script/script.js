@@ -4,7 +4,27 @@ let WPkey = 'yKNuxGFKI2TUsqwc82dCnqTyUzVUO7lz'
 let bandCat = 7;
 let stageCat = 1;
 
+function topFunction() {
+    document.documentElement.scrollTop = 0;
+}
+
 (async () => {
+
+    var topButton = document.getElementById("topButton");
+
+    window.onscroll = function (){
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.documentElement.scrollTop > 20){
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    }
+    
+
 
     const festivalStart = new Date("Jan 17, 2021 10:00:00").getTime();
     let countdown = setInterval(function () {
@@ -14,7 +34,7 @@ let stageCat = 1;
         let hour = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         let minute = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
         let second = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-        document.querySelector(".countdown").innerHTML = day + " D "+ hour + " H " + minute + " M " + second + " S ";
+        document.querySelector(".countdown").innerHTML = day + " D " + hour + " H " + minute + " M " + second + " S ";
         if (timeRemaining < 0) {
             clearInterval(countdown);
             document.querySelector(".countdown").innerHTML = "00:00:00";
