@@ -7,17 +7,27 @@
 
 /* 120 80 40 */
 
-body{
-    background-image: url("../images/background.png");
+.placeholderNav{
+    height: 86px;
 }
 
-a{
-    padding: 20px;
+body{
+    background-image: url("../images/background.png");
 }
 
 nav{
     border-bottom: 5px solid white;
 
+}
+
+a{
+    padding: 10px;
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+    color: black;
 }
 
 .navContainer{
@@ -41,6 +51,12 @@ nav{
 .lastItem{
     border-left: 5px solid white;
     padding: 20px 35px;
+    background-color: #261A0D;
+    color: white;
+}
+
+.lastItem:visited{
+    color: white;
 }
 
 .heading{
@@ -53,7 +69,7 @@ nav{
     text-align: center;
 }
 
-p{
+.pText{
     font-size: 40px;
 }
 
@@ -62,11 +78,15 @@ p{
 }
 
 .sectionWhite{
-    background-color: white;
+    background-color: rgb(223, 223, 223);
 }
 
 .fullVh{
     height: 100vh;
+}
+
+.vh80{
+    height: 80vh;
 }
 
 .whiteText{
@@ -74,7 +94,7 @@ p{
 }
 
 .paddingTop{
-    padding-top: 7vh;
+    padding-top: 8vh;
 }
 
 .sideBySide{
@@ -91,4 +111,19 @@ p{
 
 .fitImg{
     width: 40vw;
+}
+
+.sideBySideAuto{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-evenly;
+}
+
+.verticalText{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: absolute;
+    display: flex;
+    top: 30vh;
+    right: 1vw;
 }
